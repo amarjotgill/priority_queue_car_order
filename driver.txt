@@ -1,0 +1,50 @@
+
+queue1 dump after inserting 4 orders (Toyota, Honda, Ford, GM):
+(((28:GM)22:Toyota)22:Ford(24:Honda))
+
+queue2 dump after inserting 2 students (Ferrari, Hyundai):
+((10:Hyundai)6:Ferrari)
+
+Contents of queue1 after merging with queue2:
+Contents of the order queue:
+[6] Order: Ferrari, PM priority: 6, quantity: 50000, material availability: 25%, arrival time: 1
+[22] Order: Ford, PM priority: 1, quantity: 75000, material availability: 75%, arrival time: 20
+[22] Order: Toyota, PM priority: 2, quantity: 100000, material availability: 100%, arrival time: 22
+[28] Order: GM, PM priority: 4, quantity: 50000, material availability: 25%, arrival time: 23
+[24] Order: Honda, PM priority: 5, quantity: 50000, material availability: 75%, arrival time: 21
+[10] Order: Hyundai, PM priority: 3, quantity: 100000, material availability: 100%, arrival time: 10
+
+Dump queue1 after merging with queue2:
+((((28:GM)22:Toyota)22:Ford(24:Honda))6:Ferrari(10:Hyundai))
+
+Contents of queue1 after changing the priority function to priorityFn2:
+Contents of the order queue:
+[1] Order: Ford, PM priority: 1, quantity: 75000, material availability: 75%, arrival time: 20
+[2] Order: Toyota, PM priority: 2, quantity: 100000, material availability: 100%, arrival time: 22
+[4] Order: GM, PM priority: 4, quantity: 50000, material availability: 25%, arrival time: 23
+[3] Order: Hyundai, PM priority: 3, quantity: 100000, material availability: 100%, arrival time: 10
+[5] Order: Honda, PM priority: 5, quantity: 50000, material availability: 75%, arrival time: 21
+[6] Order: Ferrari, PM priority: 6, quantity: 50000, material availability: 25%, arrival time: 1
+
+Dump queue1 after changing the priority function to priorityFn2:
+(((4:GM)2:Toyota)1:Ford((5:Honda)3:Hyundai(6:Ferrari)))
+
+Contents of queue1 after changing the priority function back to priorityFn1:
+Contents of the order queue:
+[6] Order: Ferrari, PM priority: 6, quantity: 50000, material availability: 25%, arrival time: 1
+[10] Order: Hyundai, PM priority: 3, quantity: 100000, material availability: 100%, arrival time: 10
+[22] Order: Toyota, PM priority: 2, quantity: 100000, material availability: 100%, arrival time: 22
+[24] Order: Honda, PM priority: 5, quantity: 50000, material availability: 75%, arrival time: 21
+[22] Order: Ford, PM priority: 1, quantity: 75000, material availability: 75%, arrival time: 20
+[28] Order: GM, PM priority: 4, quantity: 50000, material availability: 25%, arrival time: 23
+
+Dump queue1 after changing the priority function back to priorityFn1:
+((((24:Honda)22:Toyota(22:Ford))10:Hyundai(28:GM))6:Ferrari)
+
+Final queue1 in priority order:
+[6] Order: Ferrari, PM priority: 6, quantity: 50000, material availability: 25%, arrival time: 1
+[10] Order: Hyundai, PM priority: 3, quantity: 100000, material availability: 100%, arrival time: 10
+[22] Order: Toyota, PM priority: 2, quantity: 100000, material availability: 100%, arrival time: 22
+[22] Order: Ford, PM priority: 1, quantity: 75000, material availability: 75%, arrival time: 20
+[24] Order: Honda, PM priority: 5, quantity: 50000, material availability: 75%, arrival time: 21
+[28] Order: GM, PM priority: 4, quantity: 50000, material availability: 25%, arrival time: 23
